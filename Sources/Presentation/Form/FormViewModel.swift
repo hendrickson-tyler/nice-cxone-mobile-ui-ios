@@ -50,9 +50,10 @@ class FormViewModel: ChatContainerViewModel.ChildViewModel {
 extension FormViewModel {
     
     func isValid() -> Bool {
-        self.customFields.allSatisfy { type in
-            type.isRequired ? !type.value.isEmpty : true
-        }
+        return true
+//        self.customFields.allSatisfy { type in
+//            type.isRequired ? !type.value.isEmpty : true
+//        }
     }
 
     func getCustomFields() -> [String: String] {
