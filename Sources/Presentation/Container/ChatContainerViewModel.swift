@@ -296,11 +296,11 @@ private extension ChatContainerViewModel {
     
     func createNewThread(with customFields: [String: String]? = nil) async -> ChatThread? {
         do {
-            if let customFields {
-                return try await chatProvider.threads.create(with: customFields)
-            } else {
+//            if let customFields {
+//                return try await chatProvider.threads.create(with: customFields)
+//            } else {
                 return try await chatProvider.threads.create()
-            }
+//            }
         } catch {
             show(fatal: error)
             
